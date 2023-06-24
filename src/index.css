@@ -124,16 +124,101 @@ a:hover {
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.w-12{
+
+.w-12 {
     width: 12.5%;
 }
-.clear_input{
+
+.clear_input {
     right: 70px;
 }
 
-.search_button{
+.search_button {
     background-color: transparent;
     border: none;
 }
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: unset;
+}
+
+
+.owl-carousel.owl-theme.owl-loaded.owl-drag {
+    position: relative;
+}
+
+.owl-carousel .nav-btn {
+    height: 18px;
+    position: absolute;
+    width: 18px;
+    cursor: pointer;
+    top: 40% !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.owl-nav button span {
+    position: absolute;
+    bottom: 10px;
+    font-size: 35px;
+    height: 100%;
+    display: block;
+    width: 100%;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: 0;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: 0;
+}
+
+.owl-carousel .owl-nav {
+    margin: 0;
+}
+
+.btn-wrap {
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.5s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.owl-theme .owl-nav .disabled,
+button.disabled {
+    opacity: 0.6;
+}
+
 
 /*#15545B*/

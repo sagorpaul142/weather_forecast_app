@@ -36,20 +36,22 @@ export const formatCurrentWeather = (data) => {
 
 export const formateForcastWeather = (data) => {
   let {timezone, daily, hourly} = data
-  daily = daily.slice(1, 6).map(d => {
+  daily = daily.map(d => {
     return {
-      title: formatToLocalTime(d.dt, timezone, 'ccc'),
+      title: formatToLocalTime(d.dt, timezone, 'cccc'),
+      date: formatToLocalTime(d.dt, timezone, 'dd LLL yyyy'),
       temp: d.temp.day,
       icon: d.weather[0].icon,
     }
   })
-  hourly = hourly.slice(1, 6).map(d => {
+  hourly = hourly.map(d => {
     return {
       title: formatToLocalTime(d.dt, timezone, 'hh:mm a'),
       temp: d.temp,
       icon: d.weather[0].icon
     }
   })
+  daily.shift()
   return {timezone, daily, hourly}
 }
 
