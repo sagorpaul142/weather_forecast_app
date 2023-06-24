@@ -4,19 +4,19 @@ import {WiHumidity} from "react-icons/wi";
 import {AiOutlineArrowDown, AiOutlineArrowUp} from "react-icons/ai";
 import {formatToLocalTime, iconUrlFromCode} from "../Services/WeatherService.js";
 
-const TemperatureAndDetails = ({weather}) => {
-  const {details,icon, temp, feels_like, humidity, speed, sunrise, sunset, timezone, temp_max, temp_min} = weather
+const TemperatureAndDetails = ({weather, units}) => {
+  const {details, icon, temp, feels_like, humidity, speed, sunrise, sunset, timezone, temp_max, temp_min} = weather
   return (
     <div>
       <div className="d-flex justify-content-center align-items-center py-6 text-xl text-white">
         <p>{details}</p>
       </div>
       <div
-        className="d-flex flex-row flex-wrap  align-items-center justify-content-sm-center justify-content-between justify-content-lg-evenly text-white py-3">
+        className="d-flex flex-row flex-wrap  align-items-center justify-content-between justify-content-lg-evenly text-white py-3">
         <img src={iconUrlFromCode(icon)} alt="" className={'img-fluid'}/>
         <p className="text-5xl">
           {Math.round(temp)}
-          <sup>°C</sup>
+          <sup>°{units === 'metric' && 'C'}</sup>
         </p>
         <div className="d-flex flex-column align-items-start">
           <div className="d-flex fw-lighter text-sm align-items-center justify-content-center">

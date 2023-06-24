@@ -1,4 +1,4 @@
-const Header = ({}) => {
+const Header = ({setQuery}) => {
   const cities = [
     {
       id: 1,
@@ -26,6 +26,7 @@ const Header = ({}) => {
               className="nav-link cursor-pointer"
               aria-current="page"
               href={void 0}
+              onClick={() => setQuery(city.title)}
             >
               {city.title}
             </a>

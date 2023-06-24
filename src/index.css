@@ -127,3 +127,13 @@ a:hover {
 .w-12{
     width: 12.5%;
 }
+.clear_input{
+    right: 70px;
+}
+
+.search_button{
+    background-color: transparent;
+    border: none;
+}
+
+/*#15545B*/
