@@ -32,9 +32,11 @@ const SearchSection = ({setQuery, setUnits, units}) => {
       <div className="row  align-items-center">
         <div className="col-md-3 d-sm-none d-md-block"></div>
         <div className="col-md-6 col-sm-12">
-          <form onSubmit={handleSearchClick} className={'d-flex justify-content-between align-items-center'}>
+          <form autoComplete={'off'} onSubmit={handleSearchClick}
+                className={'d-flex justify-content-between align-items-center'}>
             <div className="input-group">
               <input
+                autoComplete={'off'}
                 type="text"
                 placeholder={'Search city'}
                 className="form-control shadow"
