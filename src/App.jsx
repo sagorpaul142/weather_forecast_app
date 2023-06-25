@@ -11,6 +11,10 @@ import {
   formateForcastWeather,
 } from "./Services/WeatherService.js";
 import axios from "axios";
+import TimeAndLocationSkeleton from "./Components/TimeAndLocationSkeleton.jsx";
+import TemperatureAndDetailsSkeleton from "./Components/TemperatureAndDetailsSkeleton.jsx";
+import ForecastSkeleton from "./Components/ForecastSkeleton.jsx";
+import {ToastContainer, toast} from 'react-toastify';
 
 function App() {
   const [query, setQuery] = useState('Dhaka')
@@ -40,6 +44,7 @@ function App() {
     } catch (err) {
       console.log(err.response)
       setError(err?.response?.data?.message)
+      toast.error(err?.response?.data?.message)
       setLoading(false)
     }
   }
@@ -53,16 +58,26 @@ function App() {
       <Header setQuery={setQuery}/>
       <SearchSection setQuery={setQuery} units={units} setUnits={setUnits}/>
       {
-        loading ? 'Loading' :
+        loading ?
+          <>
+            <TimeAndLocationSkeleton/>
+            <TemperatureAndDetailsSkeleton/>
+            <ForecastSkeleton/>
+            <ForecastSkeleton/>
+            <br/>
+          </>
+          :
           weather && (
             <>
-              <TimeAndLocation dt={weather.dt} name={weather.name} country={weather.country}/>
+              <TimeAndLocation loading={loading} dt={weather.dt} name={weather.name} country={weather.country}/>
               <TemperatureAndDetails weather={weather} units={units}/>
-              <Forecast items={weather.hourly} title={'Hourly Forecast'}/>
+              <Forecast items={weather.hourly} title={'Today Forecast'}/>
               <Forecast items={weather.daily} title={'Daily Forecast'} daily/>
+              <br/>
             </>
           )
       }
+      <ToastContainer/>
     </div>
   )
 }

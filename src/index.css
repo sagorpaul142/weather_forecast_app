@@ -130,7 +130,8 @@ a:hover {
 }
 
 .clear_input {
-    right: 70px;
+    right: 10px;
+    top: 10px;
 }
 
 .search_button {
@@ -218,6 +219,10 @@ button {
 .owl-theme .owl-nav .disabled,
 button.disabled {
     opacity: 0.6;
+}
+
+.react-loading-skeleton {
+    background-color: #ffffff !important;
 }
 
 
