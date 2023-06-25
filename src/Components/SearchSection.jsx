@@ -29,8 +29,8 @@ const SearchSection = ({setQuery, setUnits, units}) => {
   return (
     <div className={'py-3'}>
       <div className="row  align-items-center">
-        <div className="col-md-2 d-sm-none d-md-block"></div>
-        <div className="col-md-8 col-sm-12">
+        <div className="col-md-3 d-sm-none d-md-block"></div>
+        <div className="col-md-6 col-sm-12">
           <form onSubmit={handleSearchClick} className={'d-flex justify-content-between align-items-center'}>
             <div className="input-group">
               <input
@@ -54,7 +54,7 @@ const SearchSection = ({setQuery, setUnits, units}) => {
 
           </form>
         </div>
-        <div className="col-md-2 d-sm-none d-md-block"></div>
+        <div className="col-md-3 d-sm-none d-md-block"></div>
       </div>
       <div className="row mt-3">
         <div className="col-md-2 d-sm-none d-md-block"></div>
@@ -66,7 +66,7 @@ const SearchSection = ({setQuery, setUnits, units}) => {
             <button onClick={handleUnitsChange} name={'imperial'} className={'celcius_ferenhit'}>°F</button>
           </div>
         </div>
-        <div className="col-md-4 d-sm-none d-md-block"></div>
+        <div className="col-md-2 d-sm-none d-md-block"></div>
       </div>
 
     </div>
