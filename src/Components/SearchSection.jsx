@@ -10,6 +10,7 @@ const SearchSection = ({setQuery, setUnits, units}) => {
     if (city) {
       setQuery(city)
     }
+    setCity('')
   }
   const handleLocation = () => {
     if (navigator.geolocation) {
