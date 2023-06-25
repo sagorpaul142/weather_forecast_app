@@ -38,18 +38,10 @@ export const options = {
       stagePadding: 80,
     },
     780: {
-      items: 2,
-      center: false,
-      autoplay: true,
-      nav: false,
-      stagePadding: 130,
+      items: 3,
     },
     991: {
       items: 3,
-      center: true,
-      autoplay: true,
-      nav: false,
-      stagePadding: 80,
     },
     992: {
       items: 5,

@@ -54,7 +54,7 @@ function App() {
   }, [query, units])
 
   return (
-    <div className={'container'} style={{backgroundColor: "#257F89"}}>
+    <div className={'container'}>
       <Header setQuery={setQuery}/>
       <SearchSection setQuery={setQuery} units={units} setUnits={setUnits}/>
       {
@@ -73,12 +73,12 @@ function App() {
               <TemperatureAndDetails weather={weather} units={units}/>
               <Forecast items={weather.hourly} title={'Today Forecast'}/>
               <Forecast items={weather.daily} title={'Daily Forecast'} daily/>
-              <br/>
             </>
           )
       }
       <ToastContainer/>
     </div>
+
   )
 }
 
