@@ -11,9 +11,9 @@ import {
   formateForcastWeather,
 } from "./Services/WeatherService.js";
 import axios from "axios";
-import TimeAndLocationSkeleton from "./Components/TimeAndLocationSkeleton.jsx";
-import TemperatureAndDetailsSkeleton from "./Components/TemperatureAndDetailsSkeleton.jsx";
-import ForecastSkeleton from "./Components/ForecastSkeleton.jsx";
+import TimeAndLocationSkeleton from "./Components/Skeleton/TimeAndLocationSkeleton.jsx";
+import TemperatureAndDetailsSkeleton from "./Components/Skeleton/TemperatureAndDetailsSkeleton.jsx";
+import ForecastSkeleton from "./Components/Skeleton/ForecastSkeleton.jsx";
 import {ToastContainer, toast} from 'react-toastify';
 
 function App() {

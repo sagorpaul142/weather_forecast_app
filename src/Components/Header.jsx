@@ -2,19 +2,19 @@ const Header = ({setQuery}) => {
   const cities = [
     {
       id: 1,
-      title: 'Dhaka'
-    },
-    {
-      id: 2,
       title: 'Mymensingh'
     },
     {
-      id: 3,
+      id: 2,
       title: 'Netrokona'
     },
     {
-      id: 4,
+      id: 3,
       title: 'Khulna'
+    },
+    {
+      id: 4,
+      title: 'Rangpur'
     },
   ]
   return (
